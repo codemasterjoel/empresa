@@ -18,6 +18,7 @@
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
+    {{-- <script src="https://cdn.tailwindcss.com/" ></script> --}}
     <link id="pagestyle" href="assets/css/argon-dashboard.css" rel="stylesheet" />
 </head>
 

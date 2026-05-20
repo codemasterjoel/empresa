@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route; 
+use App\Livewire\Dashboard\Index as dashboard;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,6 +15,9 @@ use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\ResetPassword;
 use App\Http\Controllers\ChangePassword;            
             
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('/inicio', dashboard::class)->name('inicio');
+});
 
 Route::get('/', function () {return redirect('/dashboard');})->middleware('auth');
 	Route::get('/register', [RegisterController::class, 'create'])->middleware('guest')->name('register');
